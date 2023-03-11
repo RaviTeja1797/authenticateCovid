@@ -1,0 +1,82 @@
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@13"
+}
+###
+
+//1. getStates
+GET http://localhost:3000/states/
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQzMTI1fQ.lRqO7DdN44hbB4YNNgwZLcNhYthkl3BO6yVrNwBIyg8
+
+###
+
+//2. getState
+GET http://localhost:3000/states/3
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQxMjUxfQ.xKelPY2mAwUNEV9gU5LrmFMYDffYPERItESY8A6p2ds 
+
+###
+
+//3. addDistrict
+POST http://localhost:3000/districts/
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQxMjUxfQ.xKelPY2mAwUNEV9gU5LrmFMYDffYPERItESY8A6p2ds 
+
+{
+    "districtName": "Bagalkot",
+    "stateId": 3,
+    "cases": 2323,
+    "cured": 2000,
+    "active": 315,
+    "deaths": 8
+}
+
+###
+
+//4. getDistrict
+GET http://localhost:3000/districts/5/
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQxMjUxfQ.xKelPY2mAwUNEV9gU5LrmFMYDffYPERItESY8A6p2ds 
+
+###
+
+//5. deleteDistrict
+DELETE http://localhost:3000/districts/4
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQxMjUxfQ.xKelPY2mAwUNEV9gU5LrmFMYDffYPERItESY8A6p2ds 
+
+###
+
+
+//6. updateDistrict
+PUT http://localhost:3000/districts/5/
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQxMjUxfQ.xKelPY2mAwUNEV9gU5LrmFMYDffYPERItESY8A6p2ds 
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+###
+
+//7. getStats
+GET http://localhost:3000/states/6/stats
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQxMjUxfQ.xKelPY2mAwUNEV9gU5LrmFMYDffYPERItESY8A6p2ds 
+
+###
+
+
+//8. getStateNameByDistrictId
+GET http://localhost:3000/districts/2/details/
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQxMjUxfQ.xKelPY2mAwUNEV9gU5LrmFMYDffYPERItESY8A6p2ds 
+
