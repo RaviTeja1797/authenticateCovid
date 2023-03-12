@@ -10,14 +10,14 @@ Content-Type: application/json
 //1. getStates
 GET http://localhost:3000/states/
 Content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQzMTI1fQ.lRqO7DdN44hbB4YNNgwZLcNhYthkl3BO6yVrNwBIyg8
+authorization: Bearer eyJhbGiOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQzMTI1fQ.lRqO7DdN44hbB4YNNgwZLcNhYthkl3BO6yVrNwBIyg8
 
 ###
 
 //2. getState
 GET http://localhost:3000/states/3
 Content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQxMjUxfQ.xKelPY2mAwUNEV9gU5LrmFMYDffYPERItESY8A6p2ds 
+authorization: Bearer eyJhbGciOiJUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4NTQxMjUxfQ.xKelPY2mAwUNEV9gU5LrmFMYDffYPERItESY8A6p2ds 
 
 ###
 

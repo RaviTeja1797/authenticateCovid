@@ -37,7 +37,7 @@ const authenticateUser = (request, response, next)=>{
         response.status(401)
         response.send("Invalid JWT Token")
     }else{
-        jwtToken = authHeader.split("Bearer ")[1]
+        jwtToken = authHeader.split(" ")[1]
         if (jwtToken === undefined){
             response.send(401)
             response.status('Invalid JWT Token')
@@ -65,7 +65,7 @@ expressAppInstance.post('/login/', async(request, response)=>{
     try{
         userObject = await db.get(getUserObjectQuery);
         if (userObject === undefined){
-            response.status(401)
+            response.status(400)
             response.send("Invalid user")
         }else{
             let isPasswordsMatching = await bcrypt.compare(password, userObject.password)
@@ -79,9 +79,9 @@ expressAppInstance.post('/login/', async(request, response)=>{
                 console.log(jwtToken)
                 response.send({jwtToken})
             }else{
-                console.log("Invalid password")
-                response.status(401)
-                response.send('Invalid Password')
+                
+                response.status(400)
+                response.send('Invalid password')
             }
         }
     }catch(e){
